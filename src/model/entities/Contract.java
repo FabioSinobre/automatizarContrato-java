@@ -9,16 +9,15 @@ public class Contract {
 	private Date date;
 	private Double totalValue;
 	
-	private List<Installment> partion = new ArrayList<>();
+	List<Installment> installments = new ArrayList<>();
 	
 	public Contract() {
 	}
 
-	public Contract(Integer number, Date date, Double totalValue, List<Installment> partion) {
+	public Contract(Integer number, Date date, Double totalValue) {
 		this.number = number;
 		this.date = date;
 		this.totalValue = totalValue;
-		this.partion = partion;
 	}
 
 	public Integer getNumber() {
@@ -45,21 +44,14 @@ public class Contract {
 		this.totalValue = totalValue;
 	}
 
-	public List<Installment> getPartion() {
-		return partion;
+	public List<Installment> getInstallments() {
+		return installments;
 	}
-	public void addPartion(Installment partion) {
-		this.partion.add(partion);
+	public void addInstallment(Installment installment) {
+		this.installments.add(installment);
 	}
-	public void removePartion(Installment partion) {
-		this.partion.remove(partion);
-	}
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(false);
-		return sb.toString();
+	public void removeInstallment(Installment installment) {
+		this.installments.remove(installment);
 	}
 	
-
 }
